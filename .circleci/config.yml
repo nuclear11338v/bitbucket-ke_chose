@@ -1,0 +1,25 @@
+
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.8
+    steps:
+      - checkout
+      - run:
+          name: Install Telebot
+          command: pip install telebot
+      - run:
+          name: Make scripts executable
+          command: chmod +x *
+      - run:
+          name: Run VIP script
+          command: python3 VIP.py
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      
