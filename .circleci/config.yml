@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run:
           name: Install Telebot
-          command: pip install telebot
+          command: pip install telebot pymongo
       - run:
           name: Make scripts executable
           command: chmod +x *
